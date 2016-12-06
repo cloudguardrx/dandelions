@@ -11,6 +11,17 @@ dande.directive('markdown', function() {
   }
 });
 
+dande.controller("home", function($http) {
+    var self = this;
+    $http.get("/user").success(function(data) {
+      self.user = data.userAuthentication.details.name;
+      self.authenticated = true;
+    }).error(function() {
+      self.user = "N/A";
+      self.authenticated = false;
+    });
+});
+
 dande.controller('WorkoutController', ['$scope', '$http', 'moment', function($scope, $http, moment) {
     $http.get('/workout?date=' + moment().format('YYYY-MM-DD')+'T00:00:00Z')
       .then(function(response) {

@@ -28,9 +28,12 @@
     </style>
 </head>
 
-<body ng-app="dande">
+<body ng-app="dande" ng-controller="home as home">
+    <div class="container" ng-show="!home.authenticated">
+	    Login with: <a href="/login">Facebook</a>
+    </div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-show="home.authenticated">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -51,7 +54,10 @@
       </div>
     </nav>
 
-	<div class="container">
+	<div class="container" ng-show="home.authenticated">
+	    <div class="row" style="font-size:small">Welcome: 
+	        <span ng-bind="home.user"></span>
+	    </div>
 		<div ng-controller="WorkoutController" ng-cloak class="ng-cloak">
 			<div class="row">
 			    <h1>{{date}}</h1>
