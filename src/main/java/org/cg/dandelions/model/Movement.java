@@ -1,6 +1,6 @@
 package org.cg.dandelions.model;
 
-import java.util.Set;
+import org.bson.Document;
 
 public class Movement {
 
@@ -12,8 +12,18 @@ public class Movement {
 	 * 
 	 */
 
+	public Movement() {
+	}
+
+	public Movement(Document document){
+		this.id = document.getObjectId("_id").toHexString();
+		this.name = document.getString("name");
+		this.description = document.getString("description");
+				
+	}
+
+	public String id;
 	public String name;
 	public String description;
-	public Set<Tag> tags;
 
 }

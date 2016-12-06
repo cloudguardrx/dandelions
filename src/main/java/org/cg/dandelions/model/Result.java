@@ -1,6 +1,7 @@
 package org.cg.dandelions.model;
 
 import java.time.Instant;
+import java.util.UUID;
 
 public class Result {
 
@@ -13,6 +14,8 @@ public class Result {
 	 * Results have-one Workout (NOT REQUIRED)
 	 * 
 	 */
+
+	String id;
 
 	User user;
 	Workout workout;
