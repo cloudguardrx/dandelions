@@ -12,7 +12,7 @@ public class MongoConfig {
 	public MongoDatabase database;
 
 	public MongoConfig() {
-		client = new MongoClient("localhost");
+		client = new MongoClient("ds051160.mlab.com",51160);
 		database = client.getDatabase("dandelion");
 	}
 

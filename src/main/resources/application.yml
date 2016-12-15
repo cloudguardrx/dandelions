@@ -1,3 +1,11 @@
 security:
   user:
     password: password
+ 
+spring:
+  data:
+    mongodb.host: ds051160.mlab.com
+    mongodb.port: 51160
+    mongodb.uri: mongodb://mongo_user:4theking@ds051160.mlab.com:51160/heroku_wzhmb04n
+    mongo.repositories.enabled: true  
+     

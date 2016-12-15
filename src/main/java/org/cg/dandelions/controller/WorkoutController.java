@@ -12,6 +12,7 @@ import org.cg.dandelions.db.DBService;
 import org.cg.dandelions.generator.Generator;
 import org.cg.dandelions.model.Movement;
 import org.cg.dandelions.model.Workout;
+import org.cg.dandelions.repository.WorkoutRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ public class WorkoutController {
 
 	@Autowired
 	DBService dbService;
+	
+	@Autowired
+	private WorkoutRepository workoutRepository;
 
 	@PostConstruct
 	public void init() {
