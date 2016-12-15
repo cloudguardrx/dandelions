@@ -1,3 +1,6 @@
 security:
   user:
-    password: password
+  password: password
+mongo:
+  uri: mongodb://mongo_user:4theking@ds051160.mlab.com:51160/heroku_wzhmb04n
+  database: heroku_wzhmb04n

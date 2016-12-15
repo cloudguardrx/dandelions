@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WorkoutController {
 
 	static final Logger logger = LoggerFactory.getLogger(WorkoutController.class);
-
+	
 	@Autowired
 	DBService dbService;
 
