@@ -1,3 +1,15 @@
-security:
-  user:
-    password: password
+security:  
+  oauth2:
+    client:
+      clientId: 1856016367948109
+      clientSecret: c3cb23ae2d8a0d34e0298b3b5d48cc0d
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
+mongo:
+  uri: mongodb://mongo_user:4theking@ds051160.mlab.com:51160/heroku_wzhmb04n
+  database: heroku_wzhmb04n
